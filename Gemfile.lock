@@ -67,12 +67,12 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    jasmine (2.8.0)
+      jasmine-core (>= 2.8.0, < 3.0.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
     jasmine-core (2.8.0)
-    jasmine-rails (0.14.7)
-      jasmine-core (>= 1.3, < 3.0)
-      phantomjs (>= 1.9)
-      railties (>= 3.2.0)
-      sprockets-rails
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -175,7 +175,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   faker
-  jasmine-rails
+  jasmine
   jbuilder (~> 2.0)
   jquery-rails
   rails

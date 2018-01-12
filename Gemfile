@@ -35,7 +35,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sass-rails', '>= 3.2'
 
 group :development, :test do
-	gem 'jasmine-rails'
+	gem 'jasmine'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

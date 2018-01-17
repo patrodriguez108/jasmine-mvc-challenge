@@ -5,7 +5,9 @@ describe("a tweet", function() {
     tweet = new Tweet("animelover12", "I love DBZ XD");
   });
 
-  it("has content");
+  it("has content", function() {
+  	expect(tweet.content).toEqual("I love DBZ XD")
+  });
 
   it("has a username");
 });

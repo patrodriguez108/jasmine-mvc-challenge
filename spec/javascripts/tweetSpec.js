@@ -9,5 +9,7 @@ describe("a tweet", function() {
   	expect(tweet.content).toEqual("I love DBZ XD")
   });
 
-  it("has a username");
+  it("has a username", function() {
+  	expect(tweet.username).toEqual("animelover12")
+  });
 });

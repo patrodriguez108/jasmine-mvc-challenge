@@ -4,8 +4,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    p "_________________"
-    @tweet = Tweet.new(content: params[:content], username: params[:username])
+    @tweet = Tweet.new(content: params[:tweet][:content], username: params[:tweet][:username])
     if @tweet.save
       redirect_to root_url
       # respond_to do |f|

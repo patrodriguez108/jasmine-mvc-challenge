@@ -19,7 +19,7 @@ Tweet.prototype.containsTwitter = function() {
 
 Tweet.prototype.replaceTwitterWord = function() {
 	if (this.containsTwitter()) {
-		return this.content = this.content.toLowerCase().replace(/(twitter)+/g, "Tweety")
+		return this.content = this.content.toLowerCase().replace(/(twitter)+/g, "Tweety");
 	};
 };
 
@@ -29,6 +29,17 @@ Tweet.prototype.hasTwitterLink = function() {
 
 Tweet.prototype.replaceUrl = function() {
 	if (this.hasTwitterLink()) {
-		return this.content = this.content.toLowerCase().replace(/(t.co)+/g, "Tweety")
+		return this.content = this.content.toLowerCase().replace(/(t.co)+/g, "Tweety");
 	}
-}
+};
+
+Tweet.prototype.hasAtSymbol = function() {
+	return this.username[0] === "@"
+};
+
+Tweet.prototype.addAtSymbol = function() {
+	var symbol = "@"
+	if (!this.hasAtSymbol()) {
+		return this.username = symbol.concat(this.username);
+	};
+};

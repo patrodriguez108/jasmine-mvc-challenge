@@ -10,11 +10,16 @@ describe("a tweet", function() {
   });
 
   it("has content", function() {
-  	expect(viableTweet.content).toEqual("I love DBZ XD")
+    expect(viableTweet.content).toEqual("I love DBZ XD")
   });
 
   it("has a username", function() {
-  	expect(viableTweet.username).toEqual("animelover12")
+    expect(viableTweet.username).toEqual("animelover12")
+  });
+
+  it("adds '@' to username if it is not included", function() {
+    viableTweet.addAtSymbol();
+    expect(viableTweet.username).toEqual("@animelover12")
   });
 
   it("is less than 140 characters", function() {
@@ -34,5 +39,6 @@ describe("a tweet", function() {
   it("replaces the short URL with 'Tweety'", function() {
     linkedTweet.replaceUrl();
     expect(linkedTweet.content).toEqual("go here Tweety/dknsfvfds")
-  })
+  });
+
 });

@@ -4,9 +4,12 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(content: params[:content], username: params[:username])
+    @tweet = Tweet.new(content: params[:tweet][:content], username: params[:tweet][:username])
     if @tweet.save
-      redirect_to root_url
+      respond_to do |f|
+        f.html { redirect_to root_url }
+        f.js { render :json => @tweet }
+      end
     else
       render plain: "Error saving tweet", status: 422
     end

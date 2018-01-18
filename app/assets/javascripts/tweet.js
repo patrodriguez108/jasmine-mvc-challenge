@@ -3,8 +3,8 @@ var Tweet = function(username, content) {
 	this.content = content
 };
 
-Tweet.protoype.isLessThanOneFortyCharacters = function() {
-	return this.content.length < 140
+Tweet.prototype.isLessThanOneFortyCharacters = function() {
+	return this.content.length <= 140
 };
 
 Tweet.prototype.characterLength = function() {

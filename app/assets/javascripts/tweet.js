@@ -14,11 +14,21 @@ Tweet.prototype.characterLength = function() {
 };
 
 Tweet.prototype.containsTwitter = function() {
-	return /(twitter)+/g.test(this.content.toLowerCase())
+	return /(twitter)+/g.test(this.content.toLowerCase());
 };
 
 Tweet.prototype.replaceTwitterWord = function() {
 	if (this.containsTwitter()) {
-		return this.content.toLowerCase().replace(/(twitter)+/g, "Tweety")
+		return this.content = this.content.toLowerCase().replace(/(twitter)+/g, "Tweety")
 	};
+};
+
+Tweet.prototype.hasTwitterLink = function() {
+	return /(t.co)+/g.test(this.content.toLowerCase());
+};
+
+Tweet.prototype.replaceUrl = function() {
+	if (this.hasTwitterLink()) {
+		return this.content = this.content.toLowerCase().replace(/(t.co)+/g, "Tweety")
+	}
 }

@@ -18,7 +18,7 @@ Tweet.prototype.containsTwitter = function() {
 };
 
 Tweet.prototype.replaceTwitterWord = function() {
-	// if this.containsTwitter() {
-		// return this.content.replace(/(twitter)+/g, "Tweety")
-	// }
+	if (this.containsTwitter()) {
+		return this.content.toLowerCase().replace(/(twitter)+/g, "Tweety")
+	};
 }

@@ -16,3 +16,9 @@ Tweet.prototype.characterLength = function() {
 Tweet.prototype.containsTwitter = function() {
 	return /(twitter)+/g.test(this.content.toLowerCase())
 };
+
+Tweet.prototype.replaceTwitterWord = function() {
+	// if this.containsTwitter() {
+		// return this.content.replace(/(twitter)+/g, "Tweety")
+	// }
+}

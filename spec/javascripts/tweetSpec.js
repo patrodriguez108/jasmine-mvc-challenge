@@ -25,7 +25,8 @@ describe("a tweet", function() {
     expect(window.alert).toHaveBeenCalledWith("Tweet must be less than 140 characters")
   })
 
-  it("replaces the word 'Twitter' with 'Tweety'", function() {
-    console.log(twitterTweet.containsTwitter());
-  })
+  // it("replaces the word 'Twitter' with 'Tweety'", function() {
+  //   twitterTweet.replaceTwitterWord();
+  //   expect(twitterTweet.content).toEqual("I frick fracking love Tweety")
+  // })
 });

@@ -3,6 +3,17 @@ var Tweet = function(username, content) {
 	this.content = content
 };
 
+Tweet.prototype.hasAtSymbol = function() {
+	return this.username[0] === "@"
+};
+
+Tweet.prototype.addAtSymbol = function() {
+	var symbol = "@"
+	if (!this.hasAtSymbol()) {
+		return this.username = symbol.concat(this.username);
+	};
+};
+
 Tweet.prototype.isLessThanOneFortyCharacters = function() {
 	return this.content.length <= 140
 };
@@ -33,13 +44,9 @@ Tweet.prototype.replaceUrl = function() {
 	}
 };
 
-Tweet.prototype.hasAtSymbol = function() {
-	return this.username[0] === "@"
-};
-
-Tweet.prototype.addAtSymbol = function() {
-	var symbol = "@"
-	if (!this.hasAtSymbol()) {
-		return this.username = symbol.concat(this.username);
-	};
+Tweet.prototype.validateTweet = function() {
+	this.addAtSymbol();
+	this.characterLength();
+	this.replaceTwitterWord();
+	this.replaceUrl();
 };

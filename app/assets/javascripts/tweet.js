@@ -10,5 +10,9 @@ Tweet.prototype.isLessThanOneFortyCharacters = function() {
 Tweet.prototype.characterLength = function() {
 	if (this.isLessThanOneFortyCharacters) {
 		alert("Tweet must be less than 140 characters")
-	}
-}
+	};
+};
+
+Tweet.prototype.containsTwitter = function() {
+	return /(twitter)+/g.test(this.content.toLowerCase())
+};

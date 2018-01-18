@@ -1,15 +1,19 @@
 describe("a tweet", function() {
-  var tweet;
+  var viableTweet;
 
   beforeEach(function() {
-    tweet = new Tweet("animelover12", "I love DBZ XD");
+    viableTweet = new Tweet("animelover12", "I love DBZ XD");
   });
 
   it("has content", function() {
-  	expect(tweet.content).toEqual("I love DBZ XD")
+  	expect(viableTweet.content).toEqual("I love DBZ XD")
   });
 
   it("has a username", function() {
-  	expect(tweet.username).toEqual("animelover12")
+  	expect(viableTweet.username).toEqual("animelover12")
   });
+
+  it("is less than 140 characters", function() {
+    expect(viableTweet.isLessThanOneFortyCharacters()).toBe(true)
+  })
 });

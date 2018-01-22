@@ -7,11 +7,7 @@
 
   </div>
 
-  <div class="col-xs-4">
-    <h2>Your Timeline</h2>
-
-    <% @tweets.each do |tweet| %>
-      <%= render partial: 'tweets', locals: {tweet: tweet} %>
-    <% end %>
+  <div id="js--all-tweets" class="col-xs-4">
+    <%= render partial: 'tweets', locals: {tweets: @tweets} %>
   </div>
 </div>

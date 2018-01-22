@@ -11,14 +11,7 @@
     <h2>Your Timeline</h2>
 
     <% @tweets.each do |tweet| %>
-      <div class="media">
-        <div class="media-left">
-          <a href="#"><img class="media-object" src="<%=tweet.avatar_url%>"></a>
-        </div>
-        <div class="media-body">
-          <%= link_to "#{tweet.username}", "http://tweety.com/#{tweet.username}" %> <%= tweet.content %>
-        </div>
-      </div>
+      <%= render partial: 'tweets', locals: {tweet: tweet} %>
     <% end %>
   </div>
 </div>

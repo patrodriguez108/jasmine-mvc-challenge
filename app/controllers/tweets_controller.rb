@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
     if @tweet.save
       respond_to do |f|
         f.html { redirect_to root_url }
-        f.js
+        f.js { render :json => @tweet }
       end
     else
       render plain: "Error saving tweet", status: 422

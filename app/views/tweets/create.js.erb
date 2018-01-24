@@ -1,1 +1,1 @@
-$('#timeline').prepend('<%= j render("tweets/single_tweet") %>')
+$('#js--timeline').prepend('<%= escape_javascript(render :partial => "tweets/single_tweet.html.erb", :locals => {tweet: @tweet}) %>');

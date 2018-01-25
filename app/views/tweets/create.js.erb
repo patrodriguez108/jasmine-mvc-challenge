@@ -1,1 +1,2 @@
 $('#js--timeline').prepend('<%= escape_javascript(render :partial => "tweets/single_tweet.html.erb", :locals => {tweet: @tweet}) %>');
+$('#new-tweet-form').trigger('reset');
